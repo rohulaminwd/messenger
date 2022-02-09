@@ -63,9 +63,9 @@ document.getElementById('second-sms-sent').addEventListener('click', function(){
 
 // color apply
 
-document.getElementById('orange').addEventListener('click', function(){
-    document.getElementById('color-apply').style.backgroundColor = 'white';
-})
+function colorApply(id1, id2){
+        document.getElementById(id1).style.backgroundColor = id2;
+}
 
 document.getElementById('gold').addEventListener('click', function(){
     document.getElementById('color-apply').style.backgroundColor = 'lightpink';
@@ -175,20 +175,44 @@ function scrolled(){
     document.getElementById('sms-box').scrollBy(0, 500);
 }
 
+// EMOGI BOS ADD
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function clickBox(id){
+    var x = document.getElementById(id);
+    if(x.style.display === "block"){
+        x.style.display = "none";
+    }
+  }
+
+function addItem2(id1,id2){
+    let added = document.getElementById(id1);
+    const loveValu = document.getElementById(id2).innerText;
+    added.value = added.value + loveValu;
+} 
 
 
-// function getCssValuePrefix()
+
+
+// function getCssValuePrefix(id)
 // {
 //     var rtrnVal = '';//default to standard syntax
 //     var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
 
 //     // Create a temporary DOM object for testing
-//     var dom = document.getElementById('color-apply');
+//     var dom = document.getElementById(id);
 
 //     for (var i = 0; i < prefixes.length; i++)
 //     {
 //         // Attempt to set the style
-//         dom.style.background = prefixes[i] + 'linear-gradient(#ffcc99, #ccff99)';
+//         dom.style.background = prefixes[i] + 'linear-gradient(#ffcc99, #ccff99, #ccff66)';
 
 //         // Detect if the style was successfully set
 //         if (dom.style.background)

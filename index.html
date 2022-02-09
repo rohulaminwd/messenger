@@ -11,7 +11,7 @@
 <body>
     <h1 class="tittle">Messenger chat Box</h1>
     <section class="container">
-        <div id="color-apply" class="mesenger">
+        <div id="color-apply1" class="mesenger">
             <header>
                 <div class="left-item">
                     <div class="logo">
@@ -24,10 +24,10 @@
                 </div>
                 <div class="right-item">
                     <div class="item call"><i class="fas fa-phone"></i></div>
-                    <div onclick="getCssValuePrefix()" class="item call"><i class="fas fa-sms"></i></div>
-                    <div id="orange" class="item tomato"></div>
-                    <div id="gold" class="item indigo"></div>
-                    <div id="lightblue" class="item lightgreen"></div>
+                    <div onclick="getCssValuePrefix('color-apply1')" class="item call"><span>i</span></i></div>
+                    <div onclick="colorApply('color-apply1', 'white')" class="item tomato"></div>
+                    <div onclick="colorApply('color-apply1', '#daf8e0')" class="item indigo"></div>
+                    <div onclick="colorApply('color-apply1', '#ecf01d')" class="item lightgreen"></div>
                 </div>
             </header>
             <div id="sms-box" class="sms-content">
@@ -40,16 +40,35 @@
             </div>
             <footer>
                 <div class="end-section">
-                    <textarea name="" id="comment-box" cols="10" rows="5"></textarea>
+                    <textarea name="" onclick="clickBox('my-emoji-box1')" id="comment-box" cols="10" rows="5"></textarea>
+                    <p onclick="myFunction('my-emoji-box1')" class="love emogi">🙂</p>
                     <button id="sms-sent">Sent</button>
                     <p id="love" class="love">❤️</p>
+                </div>
+                <div id="my-emoji-box1" class="emogi-box">
+                    <span onclick="addItem2('comment-box', 'Emogtem1')" id="Emogtem1">😂</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem2')" id="Emogtem2">🙂</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem3')" id="Emogtem3">🥰</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem4')" id="Emogtem4">😀</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem5')" id="Emogtem5">😢</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem6')" id="Emogtem6">😢</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem7')" id="Emogtem7">😡</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem8')" id="Emogtem8">🙄</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem9')" id="Emogtem9">👍</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem10')" id="Emogtem10">❤️</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem11')" id="Emogtem11">💔</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem12')" id="Emogtem12">💘</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem13')" id="Emogtem13">🤳</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem14')" id="Emogtem14">😘</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem15')" id="Emogtem15">😛</span>
+                    <span onclick="addItem2('comment-box', 'Emogtem16')" id="Emogtem16">😛</span>
                 </div>
             </footer>
         </div>
         <!-- secend person -->
 
 
-        <div id="color-applyed" class="mesenger">
+        <div id="color-apply2" class="mesenger">
             <header>
                 <div class="left-item">
                     <div class="logo">
@@ -62,10 +81,10 @@
                 </div>
                 <div class="right-item">
                     <div class="item call"><i class="fas fa-phone"></i></div>
-                    <div class="item call"><i class="fas fa-sms"></i></div>
-                    <div id="oranges" class="item tomato"></div>
-                    <div id="golds" class="item indigo"></div>
-                    <div id="lightblues" class="item lightgreen"></div>
+                    <div onclick="getCssValuePrefix('color-apply2')" class="item call"><span>i</span></div>
+                    <div onclick="colorApply('color-apply2', 'white')" class="item tomato"></div>
+                    <div onclick="colorApply('color-apply2', '#daf8e0')" class="item indigo"></div>
+                    <div onclick="colorApply('color-apply2', '#ecf01d')" class="item lightgreen"></div>
                 </div>
             </header>
             <div id="sms-box-second" class="sms-content">
@@ -78,9 +97,28 @@
             </div>
             <footer>
                 <div class="end-section">
-                    <textarea name="" id="comment-box-second" cols="10" rows="5"></textarea>
+                    <textarea name="" onclick="clickBox('my-emoji-box2')" id="comment-box-second" cols="10" rows="5"></textarea>
+                    <p onclick="myFunction('my-emoji-box2')" class="love emogi">🙂</p>
                     <button id="second-sms-sent">Sent</button>
                     <p id="love-S" class="love">❤️</p>
+                </div>
+                <div id="my-emoji-box2" class="emogi-box">
+                    <span onclick="addItem2('comment-box-second', 'Emogitem1')" id="Emogitem1">😂</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem2')" id="Emogitem2">😛</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem3')" id="Emogitem3">🙂</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem4')" id="Emogitem4">🥰</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem5')" id="Emogitem5">😀</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem6')" id="Emogitem6">😢</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem7')" id="Emogitem7">😢</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem8')" id="Emogitem8">😡</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem9')" id="Emogitem9">🙄</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem10')" id="Emogitem10">👍</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem11')" id="Emogitem11">❤️</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem12')" id="Emogitem12">💔</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem13')" id="Emogitem13">💘</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem14')" id="Emogitem14">🤳</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem15')" id="Emogitem15">😘</span>
+                    <span onclick="addItem2('comment-box-second', 'Emogitem16')" id="Emogitem16">😛</span>
                 </div>
             </footer>
         </div>
