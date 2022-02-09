@@ -6,10 +6,14 @@
 body{
    scroll-behavior: smooth;
 }
+.tittle{
+    text-align: center;
+    margin-top: 20px;
+}
 .container{
     display: flex;
     justify-content: space-around;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 .mesenger{
     min-width: 200px;
@@ -22,7 +26,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0px 0px 10px #8f8e8e;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 .mesenger header{
     padding: 0 10px;
@@ -195,3 +199,16 @@ footer .love{
 }
 
 
+
+
+/* RESPONSIVE CSS */
+@media screen and (max-width: 599px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mesenger{
+        margin-bottom: 30px;
+    }
+  }
