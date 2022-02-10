@@ -278,7 +278,7 @@ footer .emogi-box span{
 form{
     margin:50px auto;
     background: linear-gradient(to bottom right,#f0bddf, #df7a90);
-    width: 250px;
+    width: 300px;
     border-radius: 20px;
     padding: 10px 18px;
     -webkit-box-shadow: 0 2px 5px 2px #000;
@@ -320,8 +320,8 @@ form{
 }
 .inputbox input {
     outline: none;
-    width:44px;
-    height:42px;
+    width:54px;
+    height:52px;
     background: #e3a6f5;
     color: blue;
     font-size:24px;
