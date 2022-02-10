@@ -5,6 +5,7 @@
 }
 body{
    scroll-behavior: smooth;
+   background-color: #ffffff;
 }
 a{
     text-decoration: none;
@@ -29,7 +30,9 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0px 0px 10px #8f8e8e;
+    -webkit-box-shadow: 0 2px 5px 2px rgb(138, 141, 138);
+    box-shadow: 0px 2px 2px 2px #a8f8d7;
+    border: 2px solid rgb(115, 172, 139);
     margin: 0 10px;
     position: relative;
 }
@@ -145,12 +148,13 @@ a{
     padding-right: 15px;
     border-left: 4px solid #b6b6fa;
     display: inline-block;
-    background: linear-gradient(90deg, #d462f3, #cba6f5);
+    background: linear-gradient(90deg, #ddf7e5, #f5e8fa);
     color: #000000;
     max-width: 80%; 
     font-size: 14px;
     padding: 5px 8px;
     margin: 3px 0;
+    box-shadow: 0px 0px 2px gray;
      
 }
 .sms-content .sms-r{
@@ -162,7 +166,8 @@ a{
     padding-left: 15px;
     border-right: 4px solid #b6b6fa;  
     display: inline-block;
-    background: linear-gradient(45deg, orange, tomato);
+    background: linear-gradient(45deg, rgb(238, 230, 215), rgb(231, 184, 225));
+    box-shadow: 0px 0px 2px gray;
     color: #000000;
     max-width: 80%; 
     font-size: 14px;
@@ -264,7 +269,103 @@ footer .emogi-box span{
 /* color theme */
 .color-them{
     background: linear-gradient(rgb(230, 191, 245), rgb(200, 232, 240));
+    animation: animat 5s linear infinite;
 }
+
+
+
+/* CALCULATOR */
+form{
+    margin:50px auto;
+    background: linear-gradient(to bottom right,#f0bddf, #df7a90);
+    width: 250px;
+    border-radius: 20px;
+    padding: 10px 18px;
+    -webkit-box-shadow: 0 2px 5px 2px #000;
+    box-shadow: 0px 3px 3px 5px #49381f;
+    animation: animat 6s linear infinite;
+    border: 2px solid rgb(64, 13, 97);
+}
+@keyframes animat{
+    0%{
+      filter: blur(0px) hue-rotate(0deg);
+    }
+    100%{
+      filter: blur(0px) hue-rotate(360deg);
+       
+    }
+    
+  }
+#screen input {
+    width: 100%;
+    margin: 0 auto;
+    font-size:36px;
+    padding:5px 5px;
+    box-sizing:border-box;
+    color: rgb(55, 55, 228);
+    background:linear-gradient(to right, #deebe5, #ebcdb0);
+    text-align: center;
+    text-shadow: 1px 2px 2px #000;
+    -webkit-box-shadow: 0 2px 5px 2px #000;
+    box-shadow: 0px 0px 5px 2px rgb(199, 202, 199);
+    border-radius: 10px;
+    border: 1px solid rgb(77, 76, 76);
+    margin-bottom: 20px;
+}
+.inputbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 7px 0;
+}
+.inputbox input {
+    outline: none;
+    width:44px;
+    height:42px;
+    background: #e3a6f5;
+    color: blue;
+    font-size:24px;
+    margin-bottom:5px;
+    margin-right:1.5px;
+    text-shadow: 1px 2px 2px blue;
+    -webkit-box-shadow: 0 1px 2px 0px #000;
+    box-shadow: 0px 0px 2px 1px green;
+    border-radius: 10px;
+    border:1px solid red;
+    cursor: pointer;
+}
+.inputbox input:hover{
+    background: tomato;
+    border-radius: 10px;
+}
+.timeing{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+#date{
+    width:60%;
+    text-align: center;
+    border-radius: 5px;
+    text-shadow: 0.1px 0.2px 0.2px blue;
+    box-shadow: 0px 0px 2px #696767;
+    color: blue;
+    border: 1px solid #615f5f;
+    padding: 1px;
+    }
+    
+    #time{
+    width:30%;
+    text-align:center;
+    border-radius: 5px;
+    text-shadow: 0.1px 0.2px 0.2px blue;
+    box-shadow: 0px 0px 2px rgb(75, 78, 75);
+    color: blue;
+    border: 1px solid #ff0000(88, 87, 87);
+    padding: 1px;
+    }
+
+
 
 
 /* RESPONSIVE CSS */
