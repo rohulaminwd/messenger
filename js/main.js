@@ -1,8 +1,6 @@
 
-
-document.getElementById('sms-sent').addEventListener('click', function(){
-
-    const newComment = document.getElementById('comment-box');
+function smsAdd(id1, id2, id3){
+    const newComment = document.getElementById(id1);
     
     if(newComment.value != ''){
         const newDiv = document.createElement('div');
@@ -11,7 +9,7 @@ document.getElementById('sms-sent').addEventListener('click', function(){
         const newP = document.createElement('p')
         newP.innerText = newComment.value;
 
-        const addP = document.getElementById('sms-box').appendChild(newDiv);
+        const addP = document.getElementById(id2).appendChild(newDiv);
         addP.appendChild(newP);
 
         // second person comment
@@ -21,45 +19,17 @@ document.getElementById('sms-sent').addEventListener('click', function(){
         const secondP = document.createElement('p');
         secondP.innerText = newComment.value;
         
-        const addSecond = document.getElementById('sms-box-second').appendChild(secondDiv);
+        const addSecond = document.getElementById(id3).appendChild(secondDiv);
         addSecond.appendChild(secondP);
     }
     scrolled();
     newComment.value = '';
-})
 
+    boxNone1();
+    boxNone2();
+}
 
-// second person
-document.getElementById('second-sms-sent').addEventListener('click', function(){
-
-    const newCommentS = document.getElementById('comment-box-second');
     
-    if(newCommentS.value != ''){
-        const newDivS = document.createElement('div');
-        newDivS.classList.add('sms-r');
-
-        const newPS = document.createElement('p')
-        newPS.innerText = newCommentS.value;
-
-        const addPS = document.getElementById('sms-box-second').appendChild(newDivS);
-        addPS.appendChild(newPS);
-
-        // second person
-        const secondDivS = document.createElement('div');
-        secondDivS.classList.add('sms-l');
-
-        const secondPS = document.createElement('p');
-        secondPS.innerText = newCommentS.value;
-        
-        const addSecondS = document.getElementById('sms-box').appendChild(secondDivS);
-        addSecondS.appendChild(secondPS);
-    }
-
-    scrolled();
-
-    newCommentS.value = '';
-})
-
 
 // color apply
 
@@ -67,121 +37,53 @@ function colorApply(id1, id2){
         document.getElementById(id1).style.backgroundColor = id2;
 }
 
-document.getElementById('gold').addEventListener('click', function(){
-    document.getElementById('color-apply').style.backgroundColor = 'lightpink';
-})
-
-document.getElementById('lightblue').addEventListener('click', function(){
-    document.getElementById('color-apply').style.backgroundColor = 'lightblue';
-
-    // second person 
-})
-document.getElementById('oranges').addEventListener('click', function(){
-    document.getElementById('color-applyed').style.backgroundColor = 'white';
-})
-
-document.getElementById('golds').addEventListener('click', function(){
-    document.getElementById('color-applyed').style.backgroundColor = 'lightpink';
-})
-
-document.getElementById('lightblues').addEventListener('click', function(){
-    document.getElementById('color-applyed').style.backgroundColor = 'lightblue';
-})
-
-
-
 // love react
 
-document.getElementById('love').addEventListener('dblclick', function(){
+function loveSent(id1, id2, id3){
+    const loveReact = document.getElementById(id1).innerText;
 
-        const loveReact = document.getElementById('love').innerText;
+    const Div = document.createElement('div');
+    Div.classList.add('sms-r');
 
-        const Div = document.createElement('div');
-        Div.classList.add('sms-r');
+    const P = document.createElement('p')
+    P.innerText = loveReact;
 
-        const P = document.createElement('p')
-        P.innerText = loveReact;
+    const addPL = document.getElementById(id3).appendChild(Div);
+    addPL.appendChild(P);
 
-        const addPL = document.getElementById('sms-box').appendChild(Div);
-        addPL.appendChild(P);
+    // second person
 
-        // second person
+    const DivS = document.createElement('div');
+    DivS.classList.add('sms-l');
 
-        const DivS = document.createElement('div');
-        DivS.classList.add('sms-l');
+    const PS = document.createElement('p')
+    PS.innerText = loveReact;
 
-        const PS = document.createElement('p')
-        PS.innerText = loveReact;
+    const addPlS =  document.getElementById(id2).appendChild(DivS);
+    addPlS.appendChild(PS);
 
-        const addPlS =  document.getElementById('sms-box-second').appendChild(DivS);
-        addPlS.appendChild(PS);
-
-        scrolled();
-})
-
-
-document.getElementById('love-S').addEventListener('dblclick', function(){
-
-        const loveReact = document.getElementById('love').innerText;
-
-        const Div = document.createElement('div');
-        Div.classList.add('sms-r');
-
-        const P = document.createElement('p')
-        P.innerText = loveReact;
-
-        const addPL = document.getElementById('sms-box-second').appendChild(Div);
-        addPL.appendChild(P);
-
-        // second person
-
-        const DivS = document.createElement('div');
-        DivS.classList.add('sms-l');
-
-        const PS = document.createElement('p')
-        PS.innerText = loveReact;
-
-        const addPlS =  document.getElementById('sms-box').appendChild(DivS);
-        addPlS.appendChild(PS);
-
-        scrolled();
-})
-
-
-
-// text area valu love reack
-
-
-document.getElementById('love').addEventListener('click', function(){
-    let added = document.getElementById('comment-box');
-    const loveValu = document.getElementById('love').innerText;
-    added.value = added.value + loveValu;
     scrolled();
-})
-// second person
-document.getElementById('love-S').addEventListener('click', function(){
-    let added = document.getElementById('comment-box-second');
-
-    const loveValu = document.getElementById('love').innerText;
-    added.value = added.value + loveValu;
-    scrolled();
-})
+}
 
 
 // scroll event add
 
 function scrolled(){
-    document.getElementById('sms-box-second').scrollBy(0, 500);
-    document.getElementById('sms-box').scrollBy(0, 500);
+    document.getElementById('sms-box-second').scrollBy(0, 5000);
+    document.getElementById('sms-box').scrollBy(0, 5000);
+}
+function scroll1(id){
+    document.getElementById(id).scrollBy(0, -5000);
 }
 
-// EMOGI BOS ADD
+// EMOGI BOx ADD
 function myFunction(id) {
     var x = document.getElementById(id);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
+    if (x.style.display === "block") {
       x.style.display = "none";
+    } 
+    else {
+      x.style.display = "block";
     }
   }
 
@@ -191,14 +93,41 @@ function myFunction(id) {
         x.style.display = "none";
     }
   }
-
+  function boxNone1(){
+    var x = document.getElementById('my-emoji-box1');
+    if(x.style.display === "block"){
+        x.style.display = "none";
+    }
+  }
+  function boxNone2(){
+    var x = document.getElementById('my-emoji-box2');
+    if(x.style.display === "block"){
+        x.style.display = "none";
+    }
+  }
+// emogi added
 function addItem2(id1,id2){
     let added = document.getElementById(id1);
     const loveValu = document.getElementById(id2).innerText;
     added.value = added.value + loveValu;
 } 
 
+function leniarColor(id){
+  var dom = document.getElementById(id);
+  const actived = dom.style.background = 'linear-gradient(#ffcc99, #ccff99, #ccff66)';
+}
 
+
+// DELETE CHAT
+
+function deletChat(id1, id2){
+  const x1 = document.getElementsByClassName(id1);
+  const x2 = document.getElementsByClassName(id2);
+
+  for(const item1 of x1.length){
+    console.log(item);
+  }
+}
 
 
 // function getCssValuePrefix(id)
