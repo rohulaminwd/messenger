@@ -128,27 +128,18 @@ function deletChat(id1, id2){
     console.log(item);
   }
 }
+// add and remove class list
+function colorTheme(id){
+  var element = document.getElementById(id);
+  element.classList.toggle("color-them");
+}
 
+// delet chat 
 
-// function getCssValuePrefix(id)
-// {
-//     var rtrnVal = '';//default to standard syntax
-//     var prefixes = ['-o-', '-ms-', '-moz-', '-webkit-'];
-
-//     // Create a temporary DOM object for testing
-//     var dom = document.getElementById(id);
-
-//     for (var i = 0; i < prefixes.length; i++)
-//     {
-//         // Attempt to set the style
-//         dom.style.background = prefixes[i] + 'linear-gradient(#ffcc99, #ccff99, #ccff66)';
-
-//         // Detect if the style was successfully set
-//         if (dom.style.background)
-//         {
-//             rtrnVal = prefixes[i];
-//         }
-//     }
-
-//     return rtrnVal;
-// }
+function chatDelet(){
+  const cL = document.getElementsByClassName('sms-l');
+  for(i = 0; i < cL.length; i++){
+    console.log(cL[i]);
+  }
+  console.log('click')
+}

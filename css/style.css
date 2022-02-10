@@ -117,7 +117,7 @@ a{
 
 .others{
     position: absolute;
-    width: 100px;
+    width: 110px;
     height: 80px;
     top: 44px;
     right: 10px;
@@ -145,7 +145,7 @@ a{
     padding-right: 15px;
     border-left: 4px solid #b6b6fa;
     display: inline-block;
-    background-color: #fa8bfa;
+    background: linear-gradient(90deg, #d462f3, #cba6f5);
     color: #000000;
     max-width: 80%; 
     font-size: 14px;
@@ -162,7 +162,7 @@ a{
     padding-left: 15px;
     border-right: 4px solid #b6b6fa;  
     display: inline-block;
-    background-color: #fd7575;
+    background: linear-gradient(45deg, orange, tomato);
     color: #000000;
     max-width: 80%; 
     font-size: 14px;
@@ -261,7 +261,10 @@ footer .emogi-box span{
     font-size: 14px;
 }
 
-
+/* color theme */
+.color-them{
+    background: linear-gradient(rgb(230, 191, 245), rgb(200, 232, 240));
+}
 
 
 /* RESPONSIVE CSS */
